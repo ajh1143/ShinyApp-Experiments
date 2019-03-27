@@ -44,7 +44,7 @@ header <- dashboardHeader(
                           )
 ```
 ## Messages
-<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_2.png" class="inline"/><br>
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_3.png" class="inline"/><br>
 ```R
  dropdownMenu(type = "messages",   
                                           messageItem(
@@ -54,7 +54,7 @@ header <- dashboardHeader(
                                                      )
  ```
 ## Notifications
-<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_3.png" class="inline"/><br>
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_2.png" class="inline"/><br>
 ```R
 dropdownMenu(type = "notifications", 
                                        messageItem(
