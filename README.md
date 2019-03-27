@@ -43,41 +43,43 @@ header <- dashboardHeader(
                           )
                           )
 ```
-## Messages
-<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_3.png" class="inline"/><br>
-```R
- dropdownMenu(type = "messages",   
-                                          messageItem(
-                                                      from = "Andrew",
-                                                      message = "Haha, got you. Here's some cats. ",
-                                                      href = "https://www.reddit.com/r/cats"
-                                                     )
- ```
 ## Notifications
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_2.png" class="inline"/><br>
 ```R
 dropdownMenu(type = "notifications", 
-                                       messageItem(
-                                                  from = "Andrew",
-                                                  message = "Check out Reddit for your favorite cat videos",
-                                                  href = "https://www.reddit.com/r/doggos" 
-                                                  
-                                                  ) 
-                                      ), 
+             messageItem(
+                        from = "Andrew",
+                        message = "Check out Reddit for your favorite cat videos",
+                        href = "https://www.reddit.com/r/doggos" 
+
+                        ) 
+            )
+```
+## Messages
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_3.png" class="inline"/><br>
+```R
+ dropdownMenu(type = "messages",   
+              messageItem(
+                          from = "Andrew",
+                          message = "Haha, got you. Here's some cats. ",
+                          href = "https://www.reddit.com/r/cats"
+                         )
+
+
 ```
 ## Tasks
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_4.png" class="inline"/><br>
 ```R
 dropdownMenu(type = "tasks", badgeStatus = "success",
-                                       taskItem(value = 100, color = "green",
-                                                "Documentation"
-                                       ),
-                                       taskItem(value = 50, color = "yellow",
-                                                "Server deployment"
-                                       ),
-                                       taskItem(value = 10, color = "red",
-                                                "Overall project"
-                                       )
+             taskItem(value = 100, color = "green",
+                      "Documentation"
+             ),
+             taskItem(value = 50, color = "yellow",
+                      "Server deployment"
+             ),
+             taskItem(value = 10, color = "red",
+                      "Overall project"
+             )
 ```
 
 ## Sidebar
