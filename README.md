@@ -136,7 +136,7 @@ body <- dashboardBody( tabItems(
  )
 ```
 ## Controls
-<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Controls.png" class="inline"/><br>
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Control.png" class="inline"/><br>
 ```R
 # First tab content
 tabItem(tabName = "dashboard",
