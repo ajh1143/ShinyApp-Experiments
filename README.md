@@ -135,6 +135,27 @@ body <- dashboardBody( tabItems(
 
  )
 ```
+## Controls
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Controls.png" class="inline"/><br>
+```R
+# First tab content
+tabItem(tabName = "dashboard",
+        fluidRow(column(10, 
+                        box(plotOutput("plot1", height = 550), status = "primary", solidHeader = TRUE),
+                        box(title = "Controls", background='purple',status = "warning", solidHeader = FALSE,
+                        sliderInput("slider", "Number of observations:", 1, 255, 1),
+                        inputPanel(
+                                   selectInput('x', 'x', choices = colnames(mtcars),
+                                                                     selected='wt'),
+                                   selectInput('y', 'y', choices = colnames(mtcars), 
+                                                                  selected = 'mpg')
+                                  ),
+                                  checkboxInput('jitter', 'Jitter'),
+                                  checkboxInput('smooth', 'Smooth'),
+                                  checkboxInput('harsh', 'Harsh') 
+                                  )
+           
+```
 ## UI
 ```R
 ui <- dashboardPage(header, sidebar, body)
@@ -161,6 +182,19 @@ server <- function(input, output){
 
                 }
 ```
+## GGPlot2 Scatterplot
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Graph.png" class="inline"/><br>
+```R
+X <- input$x
+Y <- input$y
+
+# Create scatterplot
+
+ggplot(data = mtcars, aes_string(x = X, y = Y))+
+      geom_point(shape= data_style, size=10)+ 
+      labs(title="MTCARS DATA", subtitle=paste0("Data Point Symbol Type : ", data_style))
+```
+
 ## ShinyApp
 ```R
 shinyApp(ui, server)
