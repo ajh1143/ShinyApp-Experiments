@@ -1,6 +1,9 @@
 # Shiny Dashboard Experiments    
 Experimenting with ShinyApp to build interactive visualizations.
 
+<img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_1.png" class="inline"/><br>
+
+
 ## Libraries
 ```R
 library(shinydashboard)
