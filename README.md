@@ -1,8 +1,8 @@
 # Shiny Dashboard Experiments    
 Experimenting with ShinyApp to build interactive visualizations.
-
+----
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_1.png" class="inline"/><br>
-
+----
 
 ## Libraries
 ```R
@@ -10,7 +10,7 @@ library(shinydashboard)
 library(ggplot2)
 data(mtcars)
 ```
-
+----
 # Header
 ```R
 header <- dashboardHeader( 
@@ -43,6 +43,7 @@ header <- dashboardHeader(
                           )
                           )
 ```
+----
 ## Notifications
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_2.png" class="inline"/><br>
 ```R
@@ -55,6 +56,7 @@ dropdownMenu(type = "notifications",
                         ) 
             )
 ```
+----
 ## Messages
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_3.png" class="inline"/><br>
 ```R
@@ -67,6 +69,7 @@ dropdownMenu(type = "notifications",
 
 
 ```
+----
 ## Tasks
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_4.png" class="inline"/><br>
 ```R
@@ -81,7 +84,7 @@ dropdownMenu(type = "tasks", badgeStatus = "success",
                       "Overall project"
              )
 ```
-
+----
 ## Sidebar
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Widgets.png" class="inline"/><br>
 ```R
@@ -95,7 +98,7 @@ sidebar <- dashboardSidebar(
                              choices = 1:3)
                 )
 ```
-
+----
 ### Body
 ```R
 body <- dashboardBody( tabItems(
@@ -135,6 +138,7 @@ body <- dashboardBody( tabItems(
 
  )
 ```
+----
 ## Controls
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Control.png" class="inline"/><br>
 ```R
@@ -156,11 +160,12 @@ tabItem(tabName = "dashboard",
                                   )
            
 ```
+----
 ## UI
 ```R
 ui <- dashboardPage(header, sidebar, body)
 ```
-
+----
 ## Server
 ```R
 server <- function(input, output){
@@ -182,6 +187,7 @@ server <- function(input, output){
 
                 }
 ```
+----
 ## GGPlot2 Scatterplot
 <img src="https://github.com/ajh1143/ShinyApp-Experiments/blob/master/ShinyApp_Graph.png" class="inline"/><br>
 ```R
@@ -194,7 +200,7 @@ ggplot(data = mtcars, aes_string(x = X, y = Y))+
       geom_point(shape= data_style, size=10)+ 
       labs(title="MTCARS DATA", subtitle=paste0("Data Point Symbol Type : ", data_style))
 ```
-
+----
 ## ShinyApp
 ```R
 shinyApp(ui, server)
